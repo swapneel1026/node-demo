@@ -23,7 +23,7 @@ pipeline{
     }
     post{
         always{
-            echo "Pipeline successful"
+            echo "Pipeline successful ok"
         }
     }
 }
