@@ -15,11 +15,9 @@ pipeline{
                 '''
             }
         }
-        stage('Generate Report'){
+        stage('Publish junit Report'){
             steps{
-                sh '''
                 junit 'junit.xml'
-                '''
             }
         }
     }
