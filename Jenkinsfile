@@ -18,7 +18,7 @@ pipeline{
         stage('Generate Report'){
             steps{
                 sh '''
-                junit junit.xml
+                junit 'junit.xml'
                 '''
             }
         }
