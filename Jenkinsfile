@@ -2,28 +2,28 @@
 pipeline{
     agent any
     stages{
-        stage('Greeting'){
-            steps{
-                sayHello()
-            }
+      stage('Node CI'){
+        steps{
+            nodeCI()
         }
-        stage('Install Dependencies'){
-            steps{
-                installNodeDeps()
-            }
-        }
-        stage('Run tests'){
-            steps{
-               runNodeTests()
-            }
-        }
-        stage('Publish junit Report'){
-            steps{
-                publishJunitReport()
-            }
-        }
+      }
+        // stage('Install Dependencies'){
+        //     steps{
+        //         installNodeDeps()
+        //     }
+        // }
+        // stage('Run tests'){
+        //     steps{
+        //        runNodeTests()
+        //     }
+        // }
+        // stage('Publish junit Report'){
+        //     steps{
+        //         publishJunitReport()
+        //     }
+        // }
     }
-    
+
     post{
         always{
             echo "Pipeline successful "
