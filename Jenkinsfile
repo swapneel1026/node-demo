@@ -10,7 +10,7 @@ pipeline{
         stage('Install Dependencies'){
             steps{
                 installNodeDeps()
-                            }
+            }
         }
         stage('Run tests'){
             steps{
