@@ -7,20 +7,16 @@ pipeline{
                 sayHello()
             }
         }
-        // stage('Install Dependencies'){
-        //     steps{
-        //         sh '''
-        //          npm install
-        //         '''
-        //                     }
-        // }
-        // stage('Run tests'){
-        //     steps{
-        //         sh '''
-        //         npm test
-        //         '''
-        //     }
-        // }
+        stage('Install Dependencies'){
+            steps{
+                installNodeDeps()
+                            }
+        }
+        stage('Run tests'){
+            steps{
+               runNodeTests()
+            }
+        }
         // stage('Publish junit Report'){
         //     steps{
         //         junit 'junit.xml'
