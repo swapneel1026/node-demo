@@ -17,11 +17,11 @@ pipeline{
                runNodeTests()
             }
         }
-        // stage('Publish junit Report'){
-        //     steps{
-        //         junit 'junit.xml'
-        //     }
-        // }
+        stage('Publish junit Report'){
+            steps{
+                publishJunitReport()
+            }
+        }
     }
     post{
         always{
