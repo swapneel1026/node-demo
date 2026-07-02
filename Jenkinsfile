@@ -7,21 +7,7 @@ pipeline{
             nodeCI()
         }
       }
-        // stage('Install Dependencies'){
-        //     steps{
-        //         installNodeDeps()
-        //     }
-        // }
-        // stage('Run tests'){
-        //     steps{
-        //        runNodeTests()
-        //     }
-        // }
-        // stage('Publish junit Report'){
-        //     steps{
-        //         publishJunitReport()
-        //     }
-        // }
+       
     }
 
     post{
